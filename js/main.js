@@ -588,7 +588,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatbotToggler = document.querySelector("#chatbot-toggler");
   const closeChatbot = document.querySelector("#close-chatbot");
   const scrollToBottomBtn = document.querySelector("#scroll-to-bottom");
-  const API_KEY = window.GEMINI_API_KEY || "AQ.Ab8RN6J9PcCV5YBkO3SdVb3Zmybmw--NaPFk5uwmVpnIt0aBXA";
+  const API_KEY = window.GEMINI_API_KEY || "AQ.Ab8RN6Jm4JCYhSu0m0E_Or46UYoGAkFzazZIk2URX03SQ0lxVA";
   const API_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models";
   const API_MODELS = ["gemini-3.5-flash-lite"];
 
