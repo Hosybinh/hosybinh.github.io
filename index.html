@@ -1,326 +1,275 @@
-<!DOCTYPE html>
-<html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ho Sy Binh | Portfolio</title>
-    <meta name="description" content="Portfolio của Hồ Sỹ Bình" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Open Graph Tag -->
+    <meta property="og:url" content="/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ho Sy Binh - Portfolio">
+    <meta property="og:site_name" content="Ho Sy Binh Portfolio">
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="description" content="Trang portfolio của Hồ Sỹ Bình - Tổng hợp thông tin liên hệ và mạng xã hội.">
+    <meta property="og:description" content="Tổng hợp các liên kết MXH của Hồ Sỹ Bình. Bạn có thể tìm thấy mọi thông tin liên hệ khi truy cập vào">
+    <meta name="keywords" content="none">
+    <meta property="og:image" content="https://github.com/user-attachments/assets/166f9c2d-cc37-4768-8e65-748a9230c70e">
+    <meta name="author" content="hosybinh209">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Hồ Sỹ Bình",
+        "alternateName": "hosybinh209",
+        "url": "https://hosybinh.github.io",
+        "image": "https://github.com/user-attachments/assets/166f9c2d-cc37-4768-8e65-748a9230c70e",
+        "jobTitle": "Web Developer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Freelance"
+        },
+        "alumniOf": {
+          "@type": "none",
+          "name": "none"
+        },
+        "sameAs": [
+          "https://www.facebook.com/hosybinh1403",
+          "https://github.com/hosybinh",
+          "https://www.tiktok.com/@_14thang3_",
+          "https://t.me/HoSyBinh",
+          "https://zalo.me/",
+          "https://www.instagram.com/hosybinh209",
+          "https://www.linkedin.com/in/",
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Việt Nam",
+          "addressCountry": "VN"
+        },
+        "email": "mailto:hosybinh1403@gmail.com",
+        "birthDate": "2009-03-14",
+        "gender": "Male",
+        "knowsAbout": [
+          "Web Development",
+          "JavaScript",
+          "Frontend",
+          "Backend"
+        ],
+        "knowsLanguage": [
+          {
+            "@type": "Language",
+            "name": "Tiếng Việt",
+            "alternateName": "vi"
+          },
+          {
+            "@type": "Language",
+            "name": "English",
+            "alternateName": "en"
+          }
+        ]
+      }
+    </script>
+
+    <title>Ho Sy Binh - PROFILE</title>
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <link rel="stylesheet" href="css/uicons-bold-rounded.css">
+    <link rel="stylesheet" href="css/uicons-solid-rounded.css">
+    <link rel="stylesheet" href="css/all.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preload" href="js/scrollreveal.min.js" as="script">
+    <script type="text/javascript" src="js/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "MvhIHlilzHcSmpUQ9",
+        });
+      })();
+    </script>
+    <script src="js/api.js" async="" defer=""></script>
+
     <style>
-      :root {
-        --bg: #0b1020;
-        --panel: rgba(18, 26, 43, 0.85);
-        --text: #edf6ff;
-        --muted: #a8bfdc;
-        --accent: #5cc8ff;
-        --accent-2: #8fe3ff;
-      }
-      * { box-sizing: border-box; }
-      html, body {
-        margin: 0;
-        padding: 0;
-        min-height: 100%;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #08101d, #121b2d 40%, #18304d);
-        color: var(--text);
-      }
+      html,
       body {
-        min-height: 100vh;
-      }
-      a { color: inherit; text-decoration: none; }
-      img { max-width: 100%; display: block; }
-      .container {
-        width: min(1100px, calc(100% - 32px));
-        margin: 0 auto;
-      }
-      .preloader {
-        position: fixed;
-        inset: 0;
-        display: grid;
-        place-items: center;
-        background: #08101d;
-        z-index: 2000;
-        transition: opacity .35s ease, visibility .35s ease;
-      }
-      .preloader.hide {
-        opacity: 0;
-        visibility: hidden;
-      }
-      .loader {
-        width: 68px;
-        height: 68px;
-        border-radius: 50%;
-        border: 5px solid rgba(255,255,255,.12);
-        border-top-color: var(--accent);
-        animation: spin 1s linear infinite;
-      }
-      @keyframes spin { to { transform: rotate(360deg); } }
-      header {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        backdrop-filter: blur(14px);
-        background: rgba(6, 10, 18, 0.45);
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-      }
-      .header-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        min-height: 72px;
-      }
-      .logo {
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        color: var(--text);
-      }
-      .logo span {
-        color: var(--accent-2);
-      }
-      .nav {
-        display: flex;
-        gap: 18px;
-        color: var(--muted);
-        font-size: 0.96rem;
-      }
-      .nav a:hover { color: var(--text); }
-      .hero {
-        padding: 80px 0 30px;
-      }
-      .hero-grid {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 30px;
-        align-items: center;
-      }
-      .eyebrow {
-        display: inline-block;
-        padding: 8px 14px;
-        border-radius: 999px;
-        background: rgba(92,200,255,0.12);
-        border: 1px solid rgba(92,200,255,0.25);
-        color: var(--accent-2);
-        font-size: 0.82rem;
-        margin-bottom: 16px;
-      }
-      h1 {
-        margin: 0 0 16px;
-        font-size: clamp(2.4rem, 5vw, 4.4rem);
-        line-height: 1.08;
-      }
-      .hero p {
-        margin: 0;
-        color: var(--muted);
-        font-size: 1.05rem;
-        line-height: 1.8;
-        max-width: 60ch;
-      }
-      .actions {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-top: 24px;
-      }
-      .button {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 0 20px;
-        border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.12);
-        background: rgba(255,255,255,0.04);
-        color: var(--text);
-        transition: transform .2s ease, border-color .2s ease;
-      }
-      .button.primary {
-        background: linear-gradient(135deg, var(--accent), #2ea3ff);
-        border-color: transparent;
-        color: #03111d;
-        font-weight: 700;
-      }
-      .button:hover { transform: translateY(-1px); }
-      .profile-card {
-        background: var(--panel);
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: 24px;
-        padding: 24px;
-        box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-      }
-      .avatar {
-        width: 170px;
-        aspect-ratio: 1;
-        border-radius: 20px;
-        overflow: hidden;
-        margin: 0 auto 18px;
-        border: 3px solid rgba(92,200,255,0.45);
-      }
-      .profile-card h3 {
-        margin: 0 0 8px;
-        text-align: center;
-        font-size: 1.5rem;
-      }
-      .profile-card p {
-        text-align: center;
-        color: var(--muted);
-        margin: 0;
-      }
-      .socials {
-        display: flex;
-        justify-content: center;
-        gap: 14px;
-        margin-top: 18px;
-      }
-      .socials a {
-        width: 42px;
-        height: 42px;
-        display: grid;
-        place-items: center;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.04);
-        border: 1px solid rgba(255,255,255,0.08);
-      }
-      section {
-        padding: 26px 0 70px;
-      }
-      .section-title {
-        font-size: clamp(1.8rem, 3vw, 2.6rem);
-        margin: 0 0 24px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 18px;
-      }
-      .card {
-        background: var(--panel);
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: 20px;
-        padding: 20px;
-      }
-      .card h4 {
-        margin: 0 0 8px;
-        font-size: 1.12rem;
-      }
-      .card p {
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.8;
-      }
-      @media (max-width: 880px) {
-        .hero-grid, .grid {
-          grid-template-columns: 1fr;
-        }
-        .nav {
-          display: none;
-        }
+        cursor: url("images/mouse-f1.png"), auto;
       }
     </style>
+    <link rel="stylesheet" href="css/style.css">
   </head>
+
   <body>
     <div class="preloader" id="loader">
-      <div class="loader" aria-label="Loading"></div>
+      <div class="preloader__wrap">
+        <div class="loader">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+      <div class="preloader__progress">
+        <span></span>
+      </div>
     </div>
 
     <header>
-      <div class="container header-inner">
-        <div class="logo">Ho <span>Sy Binh</span></div>
-        <nav class="nav" aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
+      <div class="header-area pt-3 pb-3">
+        <div class="container">
+          <div class="header">
+            <a href="/" class="h__logo">
+              <i class="fa-solid fa-code"></i>
+              <span class="typing-text"></span>
+            </a>
+            <div class="header-controls">
+              <div class="language-flag" id="languageBtn"></div>
+
+              <div class="dark-light">
+                <input type="checkbox" id="themeToggle" class="themeToggleInput" aria-label="Toggle dark/light mode">
+                <label for="themeToggle" class="themeToggleLabel">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <mask id="moon-mask">
+                      <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                      <circle cx="11" cy="3" r="8" fill="black"></circle>
+                    </mask>
+                    <circle class="sunMoon" cx="10" cy="10" r="8" mask="url(#moon-mask)"></circle>
+                    <g class="sunRays">
+                      <circle class="sunRay" cx="18" cy="10" r="1.5"></circle>
+                      <circle class="sunRay" cx="14" cy="16.928" r="1.5"></circle>
+                      <circle class="sunRay" cx="6" cy="16.928" r="1.5"></circle>
+                      <circle class="sunRay" cx="2" cy="10" r="1.5"></circle>
+                      <circle class="sunRay" cx="6" cy="3.172" r="1.5"></circle>
+                      <circle class="sunRay" cx="14" cy="3.172" r="1.5"></circle>
+                    </g>
+                  </svg>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
 
     <main>
-      <section class="hero" id="home">
-        <div class="container hero-grid">
-          <div>
-            <div class="eyebrow">Web Developer</div>
-            <h1>Hi, I’m Hồ Sỹ Bình</h1>
-            <p>
-              I build modern, responsive websites and digital experiences with a love for clean design,
-              good UX, and practical solutions.
+      <div class="background__effect">
+        <div class="grid_background"></div>
+        <div class="global_shapes">
+          <img src="images/bg.webp" alt="shape" class="home__shape-bg">
+        </div>
+      </div>
+
+      <section class="profile" id="home">
+        <div class="container">
+          <div class="bg_img">
+            <img class="background_img" src="images/background.jpeg" alt="background">
+          </div>
+          <div class="profile__area grid">
+            <div class="profile__data">
+              <div class="profile__border">
+                <div class="profile__perfil">
+                  <img src="./images/avt.jpeg" alt="profile">
+                </div>
+                <div class="status_wrapper">
+                  <span class="status_indicator"></span>
+                  <span class="status_tooltip" data-vi="Có thể nhận việc">Available for work</span>
+                </div>
+              </div>
+
+              <h2 class="profile__name">
+                Hồ Sỹ Bình
+                <img src="./images/tichxanh.gif" alt="Tích xanh xác minh" data-vi="Tích xanh xác minh" data-en="Verified badge" width="20" height="20" />
+              </h2>
+              <h3 class="profile_profession" data-vi="Tớ là một chàng trai có niềm đam mê về lập trình.">
+                I am a guy with a passion for programming.
+              </h3>
+
+              <ul class="profile__social">
+                <li>
+                  <a href="https://www.facebook.com/hosybinh1403" class="profile__social_link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.tiktok.com/@_14thang3_" class="profile__social_link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/hosybinh" class="profile__social_link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="profile__info grid">
+              <div class="profile__info-group">
+                <h3 class="profile__info_number">
+                  <i class="fa-solid fa-award"></i>
+                  <span class="counter">67</span>+
+                </h3>
+                <p class="profile__info-description" data-vi="Dự án<br>hoàn thành">
+                  Completed<br>Project
+                </p>
+              </div>
+              <div class="profile__info-group">
+                <h3 class="profile__info_number">
+                  <i class="fa-solid fa-file-certificate"></i>
+                  <span class="counter">36</span>+
+                </h3>
+                <p class="profile__info-description" data-vi="Chứng chỉ<br>đạt được">
+                  Certificates<br>Earned
+                </p>
+              </div>
+              <div class="profile__info-group">
+                <h3 class="profile__info_number">
+                  <i class="fa-solid fa-calendar-star"></i>
+                  <span class="counter">3</span>+
+                </h3>
+                <p class="profile__info-description" data-vi="Năm<br>kinh nghiệm">
+                  Years of<br>Experience
+                </p>
+              </div>
+            </div>
+
+            <div class="profile__buttons">
+              <a href="#project" class="button" data-vi="Xem Dự Án ">View Projects <i class="fa-solid fa-folders"></i></a>
+              <div class="profile__buttons-small">
+                <a href="https://t.me/HoSyBinh" target="_blank" rel="noopener noreferrer" class="button__small button__gray" aria-label="Telegram">
+                  <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://www.instagram.com/hosybinh209/" target="_blank" rel="noopener noreferrer" class="button__small button__gray" aria-label="Messenger">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="project">
+        <div class="container">
+          <div class="project__content">
+            <h2 class="project__title" data-vi="Dự Án Của Tớ">My Project</h2>
+          </div>
+
+          <div class="projects__content grid">
+            <p class="note">
+              <b data-vi="Lưu ý:">Note:</b>
+              <span data-vi="Bấm vào ảnh, sau đó nhấn vào icon để chuyển hướng đến project!">
+                Click on the image, then click on the icon to be redirected to the project!
+              </span>
             </p>
-            <div class="actions">
-              <a class="button primary" href="#projects">View Projects</a>
-              <a class="button" href="#contact">Contact Me</a>
-            </div>
-          </div>
-
-          <div class="profile-card">
-            <div class="avatar">
-              <img src="images/avt.jpeg" alt="Hồ Sỹ Bình" />
-            </div>
-            <h3>Hồ Sỹ Bình</h3>
-            <p>Frontend / Web Developer</p>
-            <div class="socials">
-              <a href="https://github.com/hosybinh" target="_blank" rel="noreferrer" aria-label="GitHub">Git</a>
-              <a href="https://www.facebook.com/hosybinh1403" target="_blank" rel="noreferrer" aria-label="Facebook">Fb</a>
-              <a href="https://t.me/HoSyBinh" target="_blank" rel="noreferrer" aria-label="Telegram">Tg</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about">
-        <div class="container">
-          <h2 class="section-title">About Me</h2>
-          <div class="grid">
-            <article class="card">
-              <h4>Passion</h4>
-              <p>I enjoy building interfaces that are fast, clean, and easy to use.</p>
-            </article>
-            <article class="card">
-              <h4>Skills</h4>
-              <p>HTML, CSS, JavaScript, responsive design, UI/UX, and front-end development.</p>
-            </article>
-            <article class="card">
-              <h4>Focus</h4>
-              <p>I like turning ideas into polished, user-friendly websites that look modern.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects">
-        <div class="container">
-          <h2 class="section-title">Projects</h2>
-          <div class="grid">
-            <article class="card">
-              <h4>Portfolio</h4>
-              <p>Personal portfolio website built for showcase and contact.</p>
-            </article>
-            <article class="card">
-              <h4>Landing Page</h4>
-              <p>Modern landing page with clean structure and mobile responsiveness.</p>
-            </article>
-            <article class="card">
-              <h4>Tools / Utilities</h4>
-              <p>Small practical web tools for productivity and daily use.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="container">
-          <h2 class="section-title">Contact</h2>
-          <div class="card">
-            <p>Email: hosybinh1403@gmail.com</p>
           </div>
         </div>
       </section>
     </main>
 
-    <script>
-      window.addEventListener('load', function () {
-        const loader = document.getElementById('loader');
-        if (loader) loader.classList.add('hide');
-      });
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
