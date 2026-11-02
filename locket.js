@@ -2,13 +2,20 @@
 // Locket Remote Config Rewrite
 // Endpoint: firebaseremoteconfig.googleapis.com
 // Dùng cho: Loon / Quantumult X / Surge / Shadowrocket
-// Locket Gold &amp; Remote Config Unlocker VIP (Updated: Removed Certification Captions)
+// Locket Gold & Remote Config Unlocker VIP (Updated: Removed Certification Captions)
 // ============================================================
 
-var ua = (typeof $request !== "undefined" &amp;&amp; $request &amp;&amp; $request.headers) ? ($request.headers["User-Agent"] || $request.headers["user-agent"] || "") : "";
+// Bổ sung chặn lỗi nếu script bị nhầm đưa vào http-request (tránh làm hỏng request gửi đi)
+if (typeof $response === "undefined") {
+    $done({});
+}
+
+var ua = (typeof $request !== "undefined" && $request && $request.headers) ? ($request.headers["User-Agent"] || $request.headers["user-agent"] || "") : "";
 var obj = {};
 try {
-    obj = JSON.parse($response.body);
+    if (typeof $response !== "undefined" && $response.body) {
+        obj = JSON.parse($response.body);
+    }
 } catch (e) {
     obj = {};
 }
@@ -26,7 +33,7 @@ obj.entries.cache_ttl_seconds = "0";
 obj.entries.client_cache_ttl_sec = "0";
 
 // ============================================================
-// 1. CẤU HÌNH GOLD, FEATURE GATES &amp; PAYWALL
+// 1. CẤU HÌNH GOLD, FEATURE GATES & PAYWALL
 // ============================================================
 Object.assign(obj.entries, {
     feature_gates: JSON.stringify({
@@ -90,7 +97,7 @@ Object.assign(obj.entries, {
 });
 
 // ============================================================
-// 2. CHẶN QUẢNG CÁO &amp; TẮT TRACKING (SENTRY)
+// 2. CHẶN QUẢNG CÁO & TẮT TRACKING (SENTRY)
 // ============================================================
 Object.assign(obj.entries, {
     history_ads_mode: "off",
@@ -111,7 +118,7 @@ Object.assign(obj.entries, {
 });
 
 // ============================================================
-// 3. CAMERA, VIDEO, FILTERS &amp; UPLOAD QUALITY
+// 3. CAMERA, VIDEO, FILTERS & UPLOAD QUALITY
 // ============================================================
 var MY_VIDEO_DURATION = 45.0;
 var MAX_DURATION = MY_VIDEO_DURATION;
@@ -219,7 +226,7 @@ Object.assign(obj.entries, {
 });
 
 // ============================================================
-// 4. BẠN BÈ, GIỚI HẠN &amp; ĐỀ XUẤT KẾT BẠN
+// 4. BẠN BÈ, GIỚI HẠN & ĐỀ XUẤT KẾT BẠN
 // ============================================================
 Object.assign(obj.entries, {
     max_friends_count: "999999",
@@ -276,7 +283,7 @@ Object.assign(obj.entries, {
 });
 
 // ============================================================
-// 5. MOMENTS, STREAK, CHAT &amp; TƯƠNG TÁC
+// 5. MOMENTS, STREAK, CHAT & TƯƠNG TÁC
 // ============================================================
 try {
     var streak = JSON.parse(obj.entries.streak_config || "{}");
@@ -320,7 +327,7 @@ Object.assign(obj.entries, {
 });
 
 // ============================================================
-// 6. WIDGET SỰ KIỆN MỚI, KHUNG HOÀNG GIA &amp; BẬT ĐỊA CHỈ + FOCUS
+// 6. WIDGET SỰ KIỆN MỚI, KHUNG HOÀNG GIA & BẬT ĐỊA CHỈ + FOCUS
 // ============================================================
 Object.assign(obj.entries, {
     widget_frame_event_max_images: "10",
@@ -424,7 +431,7 @@ Object.assign(obj.entries, {
 });
 
 // ============================================================
-// 7. HỆ THỐNG CDN, CACHE &amp; STORAGE ĐẦY ĐỦ
+// 7. HỆ THỐNG CDN, CACHE & STORAGE ĐẦY ĐỦ
 // ============================================================
 Object.assign(obj.entries, {
     cdn_domain_replacements: JSON.stringify({
@@ -467,7 +474,7 @@ Object.assign(obj.entries, {
 });
 
 // ============================================================
-// 8. OVERLAY &amp; CUSTOM CAPTIONS
+// 8. OVERLAY & CUSTOM CAPTIONS
 // ============================================================
 Object.assign(obj.entries, {
     overlay_navigator_enabled: "true",
@@ -580,7 +587,7 @@ Object.assign(obj.entries, {
                 ]
         },
         {
-                "section": "🎨 Tình yêu &amp; Cơm chó 💕",
+                "section": "🎨 Tình yêu & Cơm chó 💕",
                 "items": [
                         {
                                 "overlay_id": "caption:em_nho_anhh",
@@ -1583,7 +1590,7 @@ Object.assign(obj.entries, {
                                                 "data": "🐍",
                                                 "type": "emoji"
                                         },
-                                        "max_lines": 1,
+                                        "maxlines": 1,
                                         "text": "Snake Vibes",
                                         "localized_text": {
                                                 "en": "Snake Vibes",
@@ -3466,7 +3473,7 @@ Object.assign(obj.entries, {
                 ]
         },
         {
-                "section": "🎨 Bất ổn &amp; Khó đỡ",
+                "section": "🎨 Bất ổn & Khó đỡ",
                 "items": [
                         {
                                 "overlay_id": "caption:luon_vui_tuoi",
@@ -3551,7 +3558,7 @@ Object.assign(obj.entries, {
                 ]
         },
         {
-                "section": "🎨 Check VAR &amp; Hóng hớt",
+                "section": "🎨 Check VAR & Hóng hớt",
                 "items": [
                         {
                                 "overlay_id": "caption:check_var",
@@ -3636,7 +3643,7 @@ Object.assign(obj.entries, {
                 ]
         },
         {
-                "section": "🎨 Góc Deadline &amp; Đi Làm",
+                "section": "🎨 Góc Deadline & Đi Làm",
                 "items": [
                         {
                                 "overlay_id": "caption:deadline_ruot",
@@ -3724,3 +3731,16 @@ Object.assign(obj.entries, {
 ])
 });
 
+var dailyFrames = {
+        1: { name: "mon", uid: "frame_mon_galaxy_cat", url: "https://i.ibb.co/84j69JnV/frame-mon-640.png" },
+        2: { name: "tue", uid: "frame_tue_mecha_dragon", url: "https://i.ibb.co/fVQvW41Z/frame-tue-640.png" },
+        3: { name: "wed", uid: "frame_wed_bamboo_rabbit_v2", url: "https://i.ibb.co/Lzv9bQbJ/frame-wed-640.png" },
+        4: { name: "thu", uid: "frame_thu_baby_bear_v2", url: "https://i.ibb.co/8wWQF1R/frame-thu-640.png" },
+        5: { name: "fri", uid: "frame_fri_astro_boy", url: "https://i.ibb.co/VYmyDN1g/frame-fri-640.png" },
+        6: { name: "sat", uid: "frame_sat_cyber_cat", url: "https://i.ibb.co/wFdwxy9w/frame-sat-640.png" },
+        0: { name: "sun", uid: "frame_sun_robot_gamer", url: "https://i.ibb.co/d4vFGDw2/frame-sun-640.png" }
+    };
+
+$done({
+    body: JSON.stringify(obj)
+});
