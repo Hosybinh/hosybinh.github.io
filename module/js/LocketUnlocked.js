@@ -286,13 +286,13 @@ if (true) {
     // Chủ Nhật: Robot phi hành gia cam gamer
     // ============================================================
     var dailyFrames = {
-        1: { name: "mon", uid: "frame_mon_galaxy_cat", url: "https://i.ibb.co/VpMpDBVR/7-DF46905-A138-4-EA9-B502-FEFABDE0-EC5-B.png" },
-        2: { name: "tue", uid: "frame_tue_mecha_dragon", url: "https://i.ibb.co/sdYZ7fMP/40-E7-A812-8-C85-42-A5-BCAC-EA2055-A8-D0-C9.png" },
-        3: { name: "wed", uid: "frame_wed_bamboo_rabbit_v2", url: "https://i.ibb.co/dw1wJRqG/0-E0905-F2-36-CF-493-F-928-F-81-B1-DA11418-F.png" },
-        4: { name: "thu", uid: "frame_thu_baby_bear_v2", url: "https://i.ibb.co/bRm2fBzs/4-F696526-C04-D-4364-B984-A4-EB2-A96-FA5-F.png" },
-        5: { name: "fri", uid: "frame_fri_astro_boy", url: "https://i.ibb.co/nMPRY23Y/7-A657-DAE-6667-4504-9-B12-97-D9-EFDC27-DC.png" },
-        6: { name: "sat", uid: "frame_sat_cyber_cat", url: "https://i.ibb.co/27PVcr1Q/164-BE039-700-E-41-B6-82-B9-DBDF2-B8-E9-C8-A.png" },
-        0: { name: "sun", uid: "frame_sun_robot_gamer", url: "https://i.ibb.co/4wPtrKkx/CCAF34-CA-F858-4-D8-E-BE69-F76750-F026-AF.png" }
+        1: { name: "mon", uid: "frame_mon", url: "https://i.ibb.co/B2dKkrCV/EB367-BF9-7436-4867-B25-F-479-F9-EA7258-E.png" },
+        2: { name: "tue", uid: "frame_tue", url: "https://i.ibb.co/KcDxtDpZ/4756-DFF2-4-D54-4-DF0-B3-E8-C546-D6365-ECB.png" },
+        3: { name: "wed", uid: "frame_wed", url: "https://i.ibb.co/1JbLGRBp/9-A222-A8-C-178-D-4074-ACD6-6668-D14-BBF13.png" },
+        4: { name: "thu", uid: "frame_thu", url: "https://i.ibb.co/s9hWPH9k/8-E9-AF077-ADC9-46-B9-99-EE-AFFD54-EEB387.png" },
+        5: { name: "fri", uid: "frame_fri", url: "https://i.ibb.co/5WP04f9R/A435-FBDC-8-B28-42-F6-97-AC-462-B5-ECAEC8-E.png" },
+        6: { name: "sat", uid: "frame_sat", url: "https://i.ibb.co/Ng5PdHG5/58-ABEFE6-E425-47-A0-B869-7-D9-D47-FB2440.png" },
+        0: { name: "sun", uid: "frame_sun", url: "https://i.ibb.co/35vXwRKF/A7-FFDD42-3-B2-E-4548-9-A8-D-E2-C758-B2337-D.png" }
     };
 
     // Tính chuẩn múi giờ Việt Nam (UTC+7) kể cả trong tiến trình VPN ngầm của iOS
