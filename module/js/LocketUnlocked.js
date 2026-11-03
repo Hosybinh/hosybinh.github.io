@@ -286,67 +286,66 @@ if (true) {
     // Chủ Nhật: Robot phi hành gia cam gamer
     // ============================================================
     var dailyFrames = {
-    1: { name: "mon", uid: "frame_mon_galaxy_cat", url: "https://i.ibb.co/B2dKkrCV/EB367-BF9-7436-4867-B25-F-479-F9-EA7258-E.png.png" },
-    2: { name: "tue", uid: "frame_tue_mecha_dragon", url: "https://i.ibb.co/KcDxtDpZ/4756-DFF2-4-D54-4-DF0-B3-E8-C546-D6365-ECB.png" },
-    3: { name: "wed", uid: "frame_wed_bamboo_rabbit_v2", url: "https://i.ibb.co/1JbLGRBp/9-A222-A8-C-178-D-4074-ACD6-6668-D14-BBF13.png" },
-    4: { name: "thu", uid: "frame_thu_baby_bear_v2", url: "https://https://i.ibb.co/s9hWPH9k/8-E9-AF077-ADC9-46-B9-99-EE-AFFD54-EEB387.png" },
-    5: { name: "fri", uid: "frame_fri_astro_boy", url: "https://https://i.ibb.co/5WP04f9R/A435-FBDC-8-B28-42-F6-97-AC-462-B5-ECAEC8-E.png" },
-    6: { name: "sat", uid: "frame_sat_cyber_cat", url: "https://https://i.ibb.co/Ng5PdHG5/58-ABEFE6-E425-47-A0-B869-7-D9-D47-FB2440.png" },
-    0: { name: "sun", uid: "frame_sun_robot_gamer", url: "https://https://i.ibb.co/35vXwRKF/A7-FFDD42-3-B2-E-4548-9-A8-D-E2-C758-B2337-D.png" }
-};
+        1: { name: "mon", uid: "frame_mon_galaxy_cat", url: "https://i.ibb.co/B2dKkrCV/EB367-BF9-7436-4867-B25-F-479-F9-EA7258-E.png" },
+        2: { name: "tue", uid: "frame_tue_mecha_dragon", url: "https://i.ibb.co/KcDxtDpZ/4756-DFF2-4-D54-4-DF0-B3-E8-C546-D6365-ECB.png" },
+        3: { name: "wed", uid: "frame_wed_bamboo_rabbit_v2", url: "https://i.ibb.co/1JbLGRBp/9-A222-A8-C-178-D-4074-ACD6-6668-D14-BBF13.png" },
+        4: { name: "thu", uid: "frame_thu_baby_bear_v2", url: "https://i.ibb.co/s9hWPH9k/8-E9-AF077-ADC9-46-B9-99-EE-AFFD54-EEB387.png" },
+        5: { name: "fri", uid: "frame_fri_astro_boy", url: "https://i.ibb.co/5WP04f9R/A435-FBDC-8-B28-42-F6-97-AC-462-B5-ECAEC8-E.png" },
+        6: { name: "sat", uid: "frame_sat_cyber_cat", url: "https://i.ibb.co/Ng5PdHG5/58-ABEFE6-E425-47-A0-B869-7-D9-D47-FB2440.png" },
+        0: { name: "sun", uid: "frame_sun_robot_gamer", url: "https://i.ibb.co/35vXwRKF/A7-FFDD42-3-B2-E-4548-9-A8-D-E2-C758-B2337-D.png" }
+    };
 
-var nowUtc = new Date();
-var vnTime = new Date(nowUtc.getTime() + (7 * 60 * 60 * 1000));
-var currentDay = vnTime.getUTCDay(); 
-var todayFrame = dailyFrames[currentDay] || dailyFrames[1];
-var dayUid = todayFrame.uid + "_" + vnTime.getUTCFullYear() + "_" + (vnTime.getUTCMonth() + 1) + "_" + vnTime.getUTCDate();
+    // Tính chuẩn múi giờ Việt Nam (UTC+7) kể cả trong tiến trình VPN ngầm của iOS
+    var nowUtc = new Date();
+    var vnTime = new Date(nowUtc.getTime() + (7 * 60 * 60 * 1000));
+    var currentDay = vnTime.getUTCDay(); // 0 = CN, 1 = T2, ..., 6 = T7
+    var todayFrame = dailyFrames[currentDay] || dailyFrames[1];
+    var dayUid = todayFrame.uid + "_" + vnTime.getUTCFullYear() + "_" + (vnTime.getUTCMonth() + 1) + "_" + vnTime.getUTCDate();
 
-if (!obj.entries) obj.entries = {};
-
-Object.assign(obj.entries, {
-    widget_frame_event_max_images: "5",
-    android_widget_frame_event_enabled: "true",
-    ios_widget_frame_event_enabled: "true",
-    widget_frame_event_enabled: "true",
-    widget_badge_enabled: "true",
-    widget_badge_v2: "true",
-    widget_stale_state_enabled: "false",
-    widget_last_sent_indicator: "false",
-    widget_sync_token_reload_mode: "clearTokenNever",
-    widget_frame_event: JSON.stringify({
-        uid: dayUid,
-        url: todayFrame.url,
-        use_local_time_zone: true,
-        placement: "below",
-        start_at: "2020-01-01T00:00:00.000Z", // Đã sửa chuẩn ISO để iOS không bị crash
-        end_at: "2099-12-31T23:59:59.000Z"   // Đã sửa chuẩn ISO
-    }),
-    live_activity_onboarding: "true",
-    live_activity_onboarding_variant: "friending",
-    register_live_activity_push_to_start_token: "true",
-    live_activity_remove_stale_start_token: "true",
-    notification_preferences_live_activities: "true",
-    notification_preferences: "true",
-    notification_reply_body_visible: "true",
-    prompt_notification_permissions_after_friending: "true",
-    activity_bar_enabled: "true",
-    journal_activity_bar_enabled: "true",
-    journal_settings: JSON.stringify({
-        debug_menu_enabled: false,
-        focus_animation: true,
-        compact_header: true,
-        friends_button: true,
-        reverse_scroll_direction: false,
-        streak_visualization: true,
-        streak_visualization_style: "gradient",
-        streak_header_minimum_count: 0,
-        streak_visualization_minimum_count: 2,
-        overlay_indicators: { location: true, music: true, static_content: true, weather: true }
-    }),
-    qr_code_config: JSON.stringify({ profile_enabled: true, scanning_enabled: true }),
-    custom_profile_pics: "true",
-    profile_menu_v2_enabled: "true"
-}); 
+    Object.assign(obj.entries, {
+        widget_frame_event_max_images: "5",
+        android_widget_frame_event_enabled: "true",
+        ios_widget_frame_event_enabled: "true",
+        widget_frame_event_enabled: "true",
+        widget_badge_enabled: "true",
+        widget_badge_v2: "true",
+        widget_stale_state_enabled: "false",
+        widget_last_sent_indicator: "false",
+        widget_sync_token_reload_mode: "clearTokenNever",
+        widget_frame_event: JSON.stringify({
+            uid: dayUid,
+            url: todayFrame.url,
+            use_local_time_zone: true,
+            placement: "below",
+            start_at: "2020-01-01T00:00:00",
+            end_at: "2099-12-31T23:59:59"
+        }),
+        live_activity_onboarding: "true",
+        live_activity_onboarding_variant: "friending",
+        register_live_activity_push_to_start_token: "true",
+        live_activity_remove_stale_start_token: "true",
+        notification_preferences_live_activities: "true",
+        notification_preferences: "true",
+        notification_reply_body_visible: "true",
+        prompt_notification_permissions_after_friending: "true",
+        activity_bar_enabled: "true",
+        journal_activity_bar_enabled: "true",
+        journal_settings: JSON.stringify({
+            debug_menu_enabled: false,
+            focus_animation: true,
+            compact_header: true,
+            friends_button: true,
+            reverse_scroll_direction: false,
+            streak_visualization: true,
+            streak_visualization_style: "gradient",
+            streak_header_minimum_count: 0,
+            streak_visualization_minimum_count: 2,
+            overlay_indicators: { location: true, music: true, static_content: true, weather: true }
+        }),
+        qr_code_config: JSON.stringify({ profile_enabled: true, scanning_enabled: true }),
+        custom_profile_pics: "true",
+        profile_menu_v2_enabled: "true"
+    });
 
     // ============================================================
     // 7. HỆ THỐNG, CACHE & STORAGE CDN
