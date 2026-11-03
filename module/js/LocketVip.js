@@ -6,7 +6,7 @@ const mapping = {
 // =========  @LocketGod ========= // 
 var ua = $request.headers["User-Agent"] || $request.headers["user-agent"],
   obj = JSON.parse($response.body);
-obj.Attention = "Locket Gold - Đã kích hoạt bản quyền Gold vĩnh viễn!";
+obj.Attention = "King of Locket - Đã kích hoạt bản quyền Gold vĩnh viễn!";
 var locketGod = {
       auto_resume_date: null,
       display_name: "locket_1600_1y",
@@ -19,12 +19,12 @@ var locketGod = {
           "amount": 399000.0,
           "currency": "VND"
       },
-      expires_date: "9999-01-01T10:10:14Z",
+      expires_date: "9999-05-03T10:10:14Z",
       grace_period_expires_date: null,
       refunded_at: null,
       unsubscribe_detected_at: null,
-      original_purchase_date: "2026-01-01T10:10:15Z",
-      purchase_date: "2026-01-01T10:10:14Z",
+      original_purchase_date: "2006-05-03T10:10:15Z",
+      purchase_date: "2006-05-03T10:10:14Z",
       store: "app_store",
       store_transaction_id: "2000001108724193",
   },
@@ -42,4 +42,3 @@ if (match) {
 $done({
   body: JSON.stringify(obj)
 });
-
