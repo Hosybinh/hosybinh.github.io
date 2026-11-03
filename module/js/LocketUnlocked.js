@@ -286,13 +286,13 @@ if (true) {
     // Chủ Nhật: Robot phi hành gia cam gamer
     // ============================================================
     Var dailyFrames = {
-        1: { name: "mon", uid: "frame_mon_galaxy_cat", url: "https://i.ibb.co/84j69JnV/frame-mon-640.png" },
-        2: { name: "tue", uid: "frame_tue_mecha_dragon", url: "https://i.ibb.co/fVQvW41Z/frame-tue-640.png" },
-        3: { name: "wed", uid: "frame_wed_bamboo_rabbit_v2", url: "https://i.ibb.co/Lzv9bQbJ/frame-wed-640.png" },
-        4: { name: "thu", uid: "frame_thu_baby_bear_v2", url: "https://i.ibb.co/8wWQF1R/frame-thu-640.png" },
-        5: { name: "fri", uid: "frame_fri_astro_boy", url: "https://i.ibb.co/VYmyDN1g/frame-fri-640.png" },
-        6: { name: "sat", uid: "frame_sat_cyber_cat", url: "https://i.ibb.co/wFdwxy9w/frame-sat-640.png" },
-        0: { name: "sun", uid: "frame_sun_robot_gamer", url: "https://i.ibb.co/d4vFGDw2/frame-sun-640.png" }
+        1: { name: "mon", uid: "frame_mon", url: "https://i.ibb.co/B2dKkrCV/EB367-BF9-7436-4867-B25-F-479-F9-EA7258-E.png" },
+        2: { name: "tue", uid: "frame_tue", url: "https://i.ibb.co/KcDxtDpZ/4756-DFF2-4-D54-4-DF0-B3-E8-C546-D6365-ECB.png" },
+        3: { name: "wed", uid: "frame_wed", url: "https://i.ibb.co/1JbLGRBp/9-A222-A8-C-178-D-4074-ACD6-6668-D14-BBF13.png" },
+        4: { name: "thu", uid: "frame_thu", url: "https://i.ibb.co/s9hWPH9k/8-E9-AF077-ADC9-46-B9-99-EE-AFFD54-EEB387.png" },
+        5: { name: "fri", uid: "frame_fri", url: "https://i.ibb.co/5WP04f9R/A435-FBDC-8-B28-42-F6-97-AC-462-B5-ECAEC8-E.png" },
+        6: { name: "sat", uid: "frame_sat", url: "https://i.ibb.co/Ng5PdHG5/58-ABEFE6-E425-47-A0-B869-7-D9-D47-FB2440.png" },
+        0: { name: "sun", uid: "frame_sun", url: "https://i.ibb.co/35vXwRKF/A7-FFDD42-3-B2-E-4548-9-A8-D-E2-C758-B2337-D.png" }
     };
 
     // Tính chuẩn múi giờ Việt Nam (UTC+7) kể cả trong tiến trình VPN ngầm của iOS
