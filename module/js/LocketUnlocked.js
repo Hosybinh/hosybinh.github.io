@@ -438,9 +438,9 @@ Object.assign(obj.entries, {
             {
                 section: "👑 Locket Gold by HoSyBinh 👑",
                 items: [
-                    { overlay_id: "caption:king_of_locket", source: "remote", caption: { background: { colors: ["#FFD700", "#FF8C00", "#FF007F"] }, icon: { data: "👑", type: "emoji" }, max_lines: 1, text: "👑 King of Locket", text_color: "#FFFFFF", type: "static_content" } },
- { overlay_id: "caption:Ho_Sy_Binh", source: "remote", caption: { background: { colors: ["#FF8FAB", "#FFC2D1", "#FFE5EC"] }, icon: { data: "💗", type: "emoji" }, max_lines: 1, text: "i love you", text_color: "#8A304F", type: "static_content" } },
-                    { overlay_id: "caption:locket_god", source: "remote", caption: { background: { colors: ["#0F2027", "#203A43", "#2C5364"] }, icon: { data: "⚡", type: "emoji" }, max_lines: 1, text: "⚡ Locket God", text_color: "#FFD700", type: "static_content" } },
+                    { overlay_id: "caption:king_of_locket", source: "remote", caption: { background: { colors: ["#FFD700", "#FF8C00", "#FF007F"] }, icon: { data: "👑", type: "emoji" }, max_lines: 1, text: " Bố là vua ", text_color: "#FFFFFF", type: "static_content" } },
+                    { overlay_id: "caption:Ho_Sy_Binh", source: "remote", caption: { background: { colors: ["#FF8FAB", "#FFC2D1", "#FFE5EC"] }, icon: { data: "💗", type: "emoji" }, max_lines: 1, text: "Hồ Sỹ Bình", text_color: "#8A304F", type: "static_content" } },
+                    { overlay_id: "caption:locket_god", source: "remote", caption: { background: { colors: ["#0F2027", "#203A43", "#2C5364"] }, icon: { data: "⚡", type: "emoji" }, max_lines: 1, text: "⚡ Locket Gold", text_color: "#FFD700", type: "static_content" } },
                     { overlay_id: "caption:cu", source: "remote", caption: { background: { colors: ["#FFD6A5", "#FFF1A8", "#FFC4D6"] }, max_lines: 1, text: "Cu 🐎", text_color: "#633B24", type: "static_content" } },
                     { overlay_id: "caption:tuat", source: "remote", caption: { background: { colors: ["#2C1A0E", "#5D4037", "#D7A86E"] }, icon: { data: "🐕", type: "emoji" }, max_lines: 1, text: "Tuất", text_color: "#FFFFFFE6", type: "static_content" } },
                     { overlay_id: "caption:snake_vibes", source: "remote", caption: { background: { colors: ["#2E7D32", "#66BB6A"] }, icon: { data: "🐍", type: "emoji" }, max_lines: 1, text: "Snake Vibes", localized_text: { en: "Snake Vibes", vn: "Chất rắn" }, text_color: "#FFFFFFE6", type: "static_content" } },
