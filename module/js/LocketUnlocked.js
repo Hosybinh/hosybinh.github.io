@@ -291,7 +291,7 @@ if (true) {
         3: { name: "wed", uid: "frame_wed_bamboo_rabbit_v2", url: "https://i.ibb.co/27ytZjVF/C521-FCF4-0-BA4-4-C74-840-F-32-CAD11-EA417.png" },
         4: { name: "thu", uid: "frame_thu_baby_bear_v2", url: "https://i.ibb.co/Z6M89P87/93-F73-A5-E-7-B14-41-D3-A40-F-B3-F0-B571-A3-D8.png" },
         5: { name: "fri", uid: "frame_fri_astro_boy", url: "https://i.ibb.co/twZ7b868/8-E74-BE20-D2-A2-48-EF-96-DB-8722-DCBD2-DAF.png" },
-        6: { name: "sat", uid: "frame_sat_cyber_cat", url: "https://i.ibb.co/fzZBG3qW/F8-CA1-C4-B-F7-DE-499-F-9-B26-765-C352-B9-EC7.png" },
+        6: { name: "sat", uid: "frame_sat_cyber_cat", url: "https://i.ibb.co/Jw36rXdZ/39-A797-C1-C6-D9-4781-ADB6-D4-FB8-DFE3-A58.png" },
         0: { name: "sun", uid: "frame_sun_robot_gamer", url: "https://i.ibb.co/wZ3c121C/094470-A6-D843-43-A3-A2-AF-0-CA6-AA6-B446-F.png" }
     };
 
